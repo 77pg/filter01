@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,65 +22,17 @@
             /* 多個濾鏡 */
             /* filter:contrast(200%) brightness(150%); */
         }
-
-        /* input[type="radio"]:checked+img:nth-child(2){
-            filter: blur(5px);} */
-        /* #blur1:checked+label{
-            color: blue;
-        } */
-        div {
-            padding: 50px;
-            margin: 50px;
-            text-align: center;
-            width: 400px;
-            
-            background-image: url("img/sunny.jpg");
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-
-        .i1::backdrop {
-            filter: blur(5px);
-        }
-
-        /* + img:nth-child(2) */
-
-        /* img:nth-of-type(2){
-            filter: brightness(200%);}
-        .i2{filter: brightness(200%);}
-        .i3{filter: contrast(200%);} */
+        img#blur1:checked{filter: blur(5px);}
     </style>
 </head>
-
 <body>
-
-    <p>模糊</p>
-    <img src="./img/sunny.jpg" name="img1" class="i1" style=filter:blur(5px)>
-    <br><br>
-    <input type="radio" id="blur1" name="filters">
+    <img src="./img/sunny.jpg" alt="sunny1" name="img1">
+    <input type="radio" id="blur1" >
     <label for="blur1">blur(5px)</label>
-    <hr>
-
-
-    <p>變亮</p>
-    <img src="./img/sunny.jpg" name="img2" class="i2">
-    <br><br>
-    <input type="radio" id="bright" name="filters">
+    <input type="radio" id="bright">
     <label for="bright">brightness(200%)</label>
-    <hr>
-
-
-    <p>對比度</p>
-    <img src="./img/sunny.jpg" name="img3" class="i3">
-    <br><br>
-    <input type="radio" id="contrast" name="filters">
+    <input type="radio" id="contrast">
     <label for="contrast">contrast(200%)</label>
     <hr><br><br>
-    <div>
-        我是div
-    </div>
-    
-
 </body>
-
 </html>
